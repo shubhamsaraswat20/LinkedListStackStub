@@ -45,12 +45,26 @@ public class Stack {
     this.size++;
   }
 
+  public int pop() {
+    int response = -1;
+
+    if (this.top != null) {
+      response = this.top.getData();
+      this.top = this.top.getNext();
+    } else {
+      System.out.println("Stack is empty!");
+    }
+
+    return response;
+  }
+
   public static void main(String[] args) {
     Stack stack = new Stack();
     System.out.println(stack);
     for (int i = 0; i < 5; i++) {
       stack.push(i + 1);
     }
+    stack.pop();
     System.out.println(stack);
   }
 
