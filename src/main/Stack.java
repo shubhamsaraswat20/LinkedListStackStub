@@ -35,7 +35,10 @@ public class Stack {
   public void push(int data) {
     //  steps to push a data item on to the top
     //  create a copy of the top of the stack
-    //
+    //  create a new node for the new data item
+    //  update the references for the new node
+    //  update the references for the old top
+    //  increment the size of the stack
   }
 
   public static void main(String[] args) {
