@@ -48,7 +48,9 @@ public class Stack {
   public static void main(String[] args) {
     Stack stack = new Stack();
     System.out.println(stack);
-    stack.push(4);
+    for (int i = 0; i < 5; i++) {
+      stack.push(i + 1);
+    }
     System.out.println(stack);
   }
 
