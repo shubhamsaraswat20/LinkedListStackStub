@@ -28,6 +28,11 @@ public class Stack {
     }
   }
 
+  // this method will push an item on to the top of the stack
+  public void push(int data) {
+
+  }
+
   public static void main(String[] args) {
     Stack stack = new Stack();
     System.out.println(stack);
