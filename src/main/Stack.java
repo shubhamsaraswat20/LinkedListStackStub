@@ -28,9 +28,11 @@ public class Stack {
     }
   }
 
+  private Node head = null;
+  private int size = 0;
+
   // this method will push an item on to the top of the stack
   public void push(int data) {
-
   }
 
   public static void main(String[] args) {
