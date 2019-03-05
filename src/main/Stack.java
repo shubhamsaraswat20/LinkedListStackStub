@@ -51,6 +51,7 @@ public class Stack {
     if (this.top != null) {
       response = this.top.getData();
       this.top = this.top.getNext();
+      size--;
     } else {
       System.out.println("Stack is empty!");
     }
