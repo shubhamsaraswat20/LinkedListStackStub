@@ -34,14 +34,12 @@ public class Stack {
   // this method will push an item on to the top of the stack
   public void push(int data) {
     //  steps to push a data item on to the top
-    //  create a copy of the top of the stack
-    Node temp = this.top;
 
     //  create a new node for the new data item
-    Node newNode = new Node(data, temp);
+    Node newNode = new Node(data, this.top);
 
-    //  update the references for the new node
-    newNode.setNext(this.top);
+    //  update the reference of the top
+    this.top = newNode;
 
     //  increment the size of the stack
     this.size++;
@@ -50,6 +48,28 @@ public class Stack {
   public static void main(String[] args) {
     Stack stack = new Stack();
     System.out.println(stack);
+    stack.push(4);
+    System.out.println(stack);
   }
 
+  @Override
+  public String toString() {
+    StringBuilder result = new StringBuilder();
+
+    result.append("[");
+
+    Node temp = this.top;
+
+    while (temp != null) {
+      result.append(temp.getData());
+      if (temp.getNext() != null) {
+        result.append(" --> ");
+      }
+      temp = temp.getNext();
+    }
+
+    result.append("]");
+
+    return result.toString();
+  }
 }
