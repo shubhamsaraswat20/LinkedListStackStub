@@ -6,6 +6,13 @@ public class CircularLinkedList {
     Node head = null;
     Node tail = null;
 
+    public static void main(String[] args) {
+
+        CircularLinkedList circularLinkedList = new CircularLinkedList();
+        circularLinkedList.print();
+
+    }
+
     class Node {
 
         int data;
@@ -38,6 +45,41 @@ public class CircularLinkedList {
     }
 
     public void print() {
+
+        if (size == 0) {
+            System.out.println("List is Empty!");
+        }
+        else {
+            Node temp = head;
+
+            do {
+                System.out.println(" " + temp.data);
+                temp = temp.next;
+            }
+            while (temp != head);
+
+            System.out.println("");
+        }
+
+    }
+
+    public void addNodeToHead(int data) {
+
+        Node n= new Node(data);
+
+        if (size == 0) {
+            head = n;
+            tail = n;
+            n.next = head;
+        }
+        else {
+            Node temp = head;
+            n.next = temp;
+            head = n;
+            tail.next = head;
+        }
+
+        size++;
 
     }
 
