@@ -9,6 +9,15 @@ public class CircularLinkedList {
     public static void main(String[] args) {
 
         CircularLinkedList circularLinkedList = new CircularLinkedList();
+
+        for (int i = 0; i < 5; i++) {
+            circularLinkedList.addNodeToHead(i+1);
+        }
+
+        circularLinkedList.print();
+        circularLinkedList.addNodeToTail(45);
+        circularLinkedList.print();
+        circularLinkedList.deleteHead();
         circularLinkedList.print();
 
     }
