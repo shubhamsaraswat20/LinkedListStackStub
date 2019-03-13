@@ -56,13 +56,13 @@ public class CircularLinkedList {
     public void print() {
 
         if (size == 0) {
-            System.out.println("List is Empty!");
+            System.out.print("List is Empty!");
         }
         else {
             Node temp = head;
 
             do {
-                System.out.println(" " + temp.data);
+                System.out.print(" " + temp.data);
                 temp = temp.next;
             }
             while (temp != head);
